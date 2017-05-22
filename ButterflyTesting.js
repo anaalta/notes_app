@@ -29,3 +29,11 @@ describe = function(objectOfTest) {
   console.log(objectOfTest);
   console.log('--------------------');
 };
+
+include = function(test_name, includedObject, inclusiveObject) {
+  if (inclusiveObject.includes(includedObject)) {
+    testPassing(test_name);
+  } else {
+    testFailing(test_name);
+  }
+};

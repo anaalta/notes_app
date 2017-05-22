@@ -19,6 +19,5 @@ isEqual('includes no ellipses when note.text is <= 20 characters',
        'A short note');
 
 describe('Note.all');
-isEqual('displays all created notes',
-         Note.all,
-         [note, note2]);
+include('note 2 is in Note.all', note2, Note.all);
+include('note is in Note.all', note, Note.all);
