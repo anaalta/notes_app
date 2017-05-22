@@ -9,11 +9,11 @@ isTruthy = function(test_name, statement) {
 };
 
 var testPassing = function(test_name) {
-  console.log('Test "' + test_name + '" passed');
+  console.log('PASSING TEST: "' + test_name + '"');
 };
 
 var testFailing = function(test_name) {
-  console.log('Test "' + test_name + '" failed');
+  console.log('FAILING TEST: "' + test_name + '"');
 };
 
 isEqual = function(test_name, statement1, statement2) {
