@@ -1,4 +1,4 @@
-require('./note.js');
+require('./Note.js');
 
 isTruthy = function(test_name, statement) {
   if (statement) {
@@ -22,4 +22,10 @@ isEqual = function(test_name, statement1, statement2) {
   } else {
     testFailing(test_name);
   }
+};
+
+describe = function(objectOfTest) {
+  console.log();
+  console.log(objectOfTest);
+  console.log('--------------------');
 };
