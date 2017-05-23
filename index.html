@@ -6,23 +6,16 @@
 <body>
   <textarea id='note_text' rows="6" cols="60">
   </textarea>
-  <input id = 'create_note' type = 'submit' name = 'Create note' value = 'Create note'>
+  <input id='create_note' type='submit' name='Create note' value='Create note' onclick="createNote()">
 </body>
 
 <script src="./Note.js"></script>
+
 <script>
-
-createNote();
-
-function createNote(){
-  document
-  .getElementById('create_note')
-  .addEventListener('onClick()', alert('djshdfh'));
-  clickEvent.preventDefault();
-//  var note = new Note(.getElementById('note_text'));
-// alert(note);
-// saveNote();
-// alert('sljhwdu');
-//   });
+function createNote() {
+  var note_text = document.getElementById("note_text").value;
+  var note = new Note(note_text);
+  note.saveNote();
+  console.log(note);
 }
 </script>
