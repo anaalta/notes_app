@@ -24,4 +24,3 @@ describe('Note.all');
 include('note 2 is in Note.all', note2, Note.all);
 include('note is in Note.all', note, Note.all);
 endDescribe();
-

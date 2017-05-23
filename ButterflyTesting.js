@@ -1,5 +1,3 @@
-require('./Note.js');
-
 isTruthy = function(test_name, statement) {
   if (statement) {
     testPassing(test_name);
