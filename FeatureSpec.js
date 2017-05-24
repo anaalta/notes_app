@@ -3,6 +3,7 @@
   require ('./ButterflyTesting.js');
 
   describe('adding a note');
+    window.location = 'http://localhost:8080/';
     document.getElementById('note_text').value = 'Hey, we created a note on the front end';
     document.getElementById('create_note').click();
     isEqual('summary of note is displayed after create_note is clicked',
