@@ -7,6 +7,7 @@
 <h1>THE Note taking app</h1>
 
 <body>
+  <p id='full_note'></p>
   <textarea id='note_text' rows="6" cols="60">
   </textarea>
   <input id='create_note' type='submit' name='Create note' value='Create note' onclick="createNote(); displayAll();">
@@ -30,14 +31,32 @@
     document.body.insertAdjacentHTML('beforeend', "<ol id = 'list' ></ol>");
     for (i = 0; i < Note.all.length; i++) {
       document.getElementById('list').insertAdjacentHTML('afterbegin',
-        '<li>' + Note.all[i].summary() + '</li>');
+        '<li><a href=#' + i + '>' + Note.all[i].summary() + '</a></li>');
+    }
+  }
+
+  (function displaySelectedNote() {
+    window.addEventListener("hashchange", showNoteForCurrentLink)
+  })();
+
+  function showNoteForCurrentLink() {
+    showNote(getUrl(window.location));
+  }
+
+  function getUrl(location) {
+    return location.hash.split('#')[1];
+  };
+
+  function showNote(note) {
+    if (Note.all.length > 0) {
+      document
+        .getElementById('full_note')
+        .innerHTML = Note.all[note].text
     }
   }
 
   function displayAll() {
-    if (Note.all.length > 0) {
-      clearDisplay();
-      populateNoteList();
-    }
+    clearDisplay();
+    populateNoteList();
   }
 </script>
