@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <title> THE Note taking app</title>
+
 </html>
 <h1>THE Note taking app</h1>
+
 <body>
   <textarea id='note_text' rows="6" cols="60">
   </textarea>
@@ -12,22 +14,23 @@
 <script src="./Note.js"></script>
 
 <script>
-function createNote() {
-  var note_text = document.getElementById("note_text").value;
-  var note = new Note(note_text);
-  note.saveNote();
-}
+  function createNote() {
+    var note_text = document.getElementById("note_text").value;
+    var note = new Note(note_text);
+  }
+  function DisplayAll() {
+      if (Note.all.length > 0) {
+        for (i = 0; i < Note.all.length; i++) {
+        console.log(Note.all[i].summary()); } }
+        }
 
+ createNote();
+ DisplayAll();
 </script>
 
-<!-- POTENTIALLY a print function -->
-<!-- this.el = document.getElementById('note_text')
-var note = el.value;
-Note.all.push(note);
 
-this.DisplayAll = function() {
-    if (Note.all.length > 0) {
-      for (i = 0; i < Note.all.length; i++) {
-         Note.all[i]
-      }
-    } -->
+ <!-- POTENTIALLY a print function -->
+
+<!-- this.el = document.getElementById('note_text')
+// // var note = el.value;
+// // Note.all.push(note);
