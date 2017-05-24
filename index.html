@@ -9,7 +9,7 @@
 <body>
   <textarea id='note_text' rows="6" cols="60">
   </textarea>
-  <input id='create_note' type='submit' name='Create note' value='Create note' onclick="createNote(); DisplayAll();">
+  <input id='create_note' type='submit' name='Create note' value='Create note' onclick="createNote(); displayAll();">
 </body>
 
 <script src="./Note.js"></script>
@@ -20,16 +20,24 @@
     var note = new Note(note_text);
   }
 
-  function DisplayAll() {
+  function clearDisplay() {
+    if (document.getElementById('list')) {
+      document.getElementById('list').outerHTML = "";
+    }
+  }
+
+  function populateNoteList() {
+    document.body.insertAdjacentHTML('beforeend', "<ol id = 'list' ></ol>");
+    for (i = 0; i < Note.all.length; i++) {
+      document.getElementById('list').insertAdjacentHTML('afterbegin',
+        '<li>' + Note.all[i].summary() + '</li>');
+    }
+  }
+
+  function displayAll() {
     if (Note.all.length > 0) {
-      if (document.getElementById('list')) {
-        document.getElementById('list').outerHTML = "";
-      }
-      document.body.insertAdjacentHTML('beforeend', "<ol id = 'list' ></ol>");
-      for (i = 0; i < Note.all.length; i++) {
-        document.getElementById('list').insertAdjacentHTML('afterbegin',
-          '<li>' + Note.all[i].summary() + '</li>');
-      }
+      clearDisplay();
+      populateNoteList();
     }
   }
 </script>
