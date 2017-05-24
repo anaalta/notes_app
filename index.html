@@ -1,6 +1,8 @@
+
+
 <!DOCTYPE html>
 <html>
-<title> THE Note taking app</title>
+  <title> THE Note taking app</title>
 
 </html>
 <h1>THE Note taking app</h1>
@@ -8,7 +10,7 @@
 <body>
   <textarea id='note_text' rows="6" cols="60">
   </textarea>
-  <input id='create_note' type='submit' name='Create note' value='Create note' onclick="createNote(); DisplayAll()">
+  <input id='create_note' type='submit' name='Create note' value='Create note' onclick="createNote(); DisplayAll();">
 </body>
 
 <script src="./Note.js"></script>
@@ -19,14 +21,15 @@
     var note = new Note(note_text);
   }
   function DisplayAll() {
-      if (Note.all.length > 0) {
-        document.body.insertAdjacentHTML('beforeend', "<ol id = 'list' ></ol>")
-        for (i = 0; i < Note.all.length; i++) {
-        return document.getElementById('list').insertAdjacentHTML('afterbegin',
-         '<li>'+ Note.all[i].text + '</li>' )}
-        }
-        }
-
- createNote();
- DisplayAll();
+    if (Note.all.length > 0) {
+      if (document.getElementById('list')) {
+        document.getElementById('list').outerHTML = "";
+      }
+      document.body.insertAdjacentHTML('beforeend', "<ol id = 'list' ></ol>");
+      for (i = 0; i < Note.all.length; i++) {
+        document.getElementById('list').insertAdjacentHTML('afterbegin',
+                                                                  '<li>'+ Note.all[i].text + '</li>' );
+      }
+    }
+  }
 </script>
