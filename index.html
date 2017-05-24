@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
+
 <html>
-  <title> THE Note taking app</title>
+<title> THE Note taking app</title>
 
 </html>
 <h1>THE Note taking app</h1>
@@ -20,6 +19,7 @@
     var note_text = document.getElementById("note_text").value;
     var note = new Note(note_text);
   }
+
   function DisplayAll() {
     if (Note.all.length > 0) {
       if (document.getElementById('list')) {
@@ -28,7 +28,7 @@
       document.body.insertAdjacentHTML('beforeend', "<ol id = 'list' ></ol>");
       for (i = 0; i < Note.all.length; i++) {
         document.getElementById('list').insertAdjacentHTML('afterbegin',
-                                                                  '<li>'+ Note.all[i].text + '</li>' );
+          '<li>' + Note.all[i].summary() + '</li>');
       }
     }
   }
