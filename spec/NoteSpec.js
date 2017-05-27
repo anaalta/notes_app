@@ -1,5 +1,5 @@
 require ('./ButterflyTesting.js');
-var Note = require('./Note.js').Note;
+var Note = require('../src/Note.js').Note;
 
 var note = new Note('My first note is more than 20 characters');
 
