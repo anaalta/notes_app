@@ -1,3 +1,6 @@
+(function(exports) {
+  'use strict';
+  
 var Note = function(text){
   this.text = text;
   this.saveNote();
@@ -17,4 +20,5 @@ Note.prototype.saveNote = function(){
   Note.all.push(this);
 };
 
-module.exports = Note;
+  exports.Note = Note;
+})(this);
