@@ -2,7 +2,7 @@
   "name": "notes_app",
   "version": "1.0.0",
   "description": "",
-  "main": "ButterflyTesting.js",
+  "main": "index.html",
   "dependencies": {
     "http-server": "^0.10.0"
   },
