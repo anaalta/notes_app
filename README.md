@@ -3,7 +3,7 @@ One-Page Note App
 
 A simple one-page note app. We test-drove its development with our own testing framework, both at unit and feature level, and we wrote everything in vanilla Javascript.
 
-![Notes_App Screenshot](http://i.imgur.com/CcVL2Is.png)
+![Notes_App Screenshot](http://i.imgur.com/fmOL8NH.png)
 
 Users can create, book, and destroy listings.
 
