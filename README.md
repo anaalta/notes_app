@@ -1,5 +1,4 @@
-One-Page Note App
------------
+# One-Page Note App
 
 A simple one-page note app. We test-drove its development with our own testing framework, both at unit and feature level, and we wrote everything in vanilla Javascript.
 
