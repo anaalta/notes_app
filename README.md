@@ -4,7 +4,7 @@ A simple one-page note app. We test-drove its development with our own testing f
 
 ![Notes_App Screenshot](http://i.imgur.com/fmOL8NH.png)
 
-Users can create, book, and destroy listings.
+Users can create notes, see a list of summarized notes, and click on a summary to display the full note.
 
 ## Installation
 
