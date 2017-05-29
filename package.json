@@ -2,7 +2,7 @@
   "name": "notes_app",
   "version": "1.0.0",
   "description": "",
-  "main": "ButterflyTesting.js",
+  "main": "index.html",
   "dependencies": {
     "http-server": "^0.10.0"
   },
@@ -10,7 +10,8 @@
     "http-server": "^0.10.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "http-server",
+    "test": "open TestRunner.html"
   },
   "repository": {
     "type": "git",
