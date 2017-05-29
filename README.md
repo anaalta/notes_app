@@ -12,7 +12,7 @@ Users can create notes, see a list of summarized notes, and click on a summary t
 
 ## Usage
 
-Option 1: Try it hosted [#here#](github-pages-address-goes-here).
+Option 1: Try it hosted [here](https://anaalta.github.io/notes_app/).
 
 Option 2: Open `index.html` in your favourite web browser.
 
